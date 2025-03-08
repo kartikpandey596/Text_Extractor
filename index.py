@@ -7,4 +7,4 @@ with st.form("my_form"):
     submit_button = st.form_submit_button("Submit")
 
 if submit_button:
-    print(weburl)
+    st.write(weburl)
