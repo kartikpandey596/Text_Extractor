@@ -1,4 +1,5 @@
 import streamlit as st
+import validators
 
 st.title('Content Extractor Website')
 
@@ -7,4 +8,7 @@ with st.form("my_form"):
     submit_button = st.form_submit_button("Submit")
 
 if submit_button:
-    st.write(weburl)
+    if validators.url(weburl) is True
+        st.write(weburl)
+    else:
+        st.write("Invalid URL")
