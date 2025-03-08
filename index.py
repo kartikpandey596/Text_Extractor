@@ -16,6 +16,6 @@ if submit_button:
         response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
         text = soup.get_text()
-        st.download_button(text,file_name=datetime.now().strftime("%Y-%m-%d-%H:%M:%S")+".txt")
+        st.download_button(label="Download",data="text",file_name=datetime.now().strftime("%Y-%m-%d-%H:%M:%S")+".txt")
     else:
         st.write("Invalid URL")
